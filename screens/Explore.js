@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { View, Text, SafeAreaView, TextInput, Image, StyleSheet,ScrollView,Dimensions } from 'react-native'
 import Category from './components/Explore/Category'
+import Home from './components/Explore/Home'
 
 const {height, width} = Dimensions.get('window')
 
@@ -25,7 +26,7 @@ const {height, width} = Dimensions.get('window')
                 />    
                         <TextInput 
                         underlineColorAndroid='transparent'
-                        placeholder="Try new delhi"
+                        placeholder="Try Jaipur"
                         placeholderTextColor='grey'
                         style={{
                             flex:1,fontWeight:'700',backgroundColor:'white',
@@ -74,6 +75,20 @@ const {height, width} = Dimensions.get('window')
                                 </View>
                             </View>
                         </View>
+
+                        <View style={{paddingTop:30, backgroundColor:'white'}}>
+                            <Text style={{fontSize:24, fontWeight:'700',paddingHorizontal:20}}>
+                                Home arround the world
+                            </Text>
+                            <View style={{paddingHorizontal:20, marginTop:20,flexDirection:'row',flexWrap:'wrap',justifyContent:'space-between'}}>
+                                <Home width={width} name="The Cozy Place" type="Private Room - 2 Beds" price="82" rating={4} imageUri={require('../img/1.jpg')}/>
+                                <Home width={width} name="The Harvard Place" type="Personal Room - 2 Beds" price="62" rating={3} imageUri={require('../img/2.jpg')}/>
+                                <Home width={width} name="The Pincity Place" type="Family Room - 3 Beds" price="92" rating={5} imageUri={require('../img/3.jpg')}/>
+                                <Home width={width} name="The Manipal Place" type="Single Room - 1 Beds" price="89" rating={4} imageUri={require('../img/4.jpg')}/>
+                               
+                        </View>
+                        </View>
+
                    </ScrollView>
                 </View>
             </SafeAreaView>
